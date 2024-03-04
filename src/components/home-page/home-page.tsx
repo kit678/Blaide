@@ -34,7 +34,6 @@ export const HomePage = ({ className }: HomePageProps) => {
                     className={styles.image}
                 />
             </motion.div>
-            <div />
         </div>
     );
 };
