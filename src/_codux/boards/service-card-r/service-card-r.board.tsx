@@ -10,6 +10,11 @@ export interface ServiceCardRProps {
 
 export default createBoard({
     name: 'ServiceCardR',
-    Board: () => <ServiceCardR />,
+    Board: () => <ServiceCardR 
+                    className="example-class"
+                    heading="Sample Heading"
+                    description="This is a sample description for the ServiceCardR component."
+                    img="path/to/sample-image.jpg"
+                 />,
     isSnippet: true,
 });
