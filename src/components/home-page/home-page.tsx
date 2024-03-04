@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 import styles from './home-page.module.scss';
 
 export interface HomePageProps {
@@ -11,7 +12,12 @@ export interface HomePageProps {
  */
 export const HomePage = ({ className }: HomePageProps) => {
     return (
-        <div className={classNames(styles.root, className)}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className={classNames(styles.root, className)}
+        >
             <div className={styles.title}>I&apos;M A TITLE</div>
             <div className={styles.paragraph}>
                 <div className={styles.text}>
@@ -27,6 +33,6 @@ export const HomePage = ({ className }: HomePageProps) => {
                 alt=""
                 className={styles.image}
             />
-        </div>
+        </motion.div>
     );
 };
