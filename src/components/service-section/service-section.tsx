@@ -18,7 +18,7 @@ export const ServiceSection = ({ className }: ServiceSectionProps) => {
                     title={service.title}
                     description={service.description}
                     image={service.image}
-                    alignment={service.alignment}
+                    alignment={service.alignment as "left" | "right"}
                 />
             ))}
         </div>
