@@ -6,4 +6,22 @@
     border-radius: 15px;
     display: flex;
     box-shadow: 2.41px 3.19px 2px rgba(0, 0, 0, 0.35);
+    position: relative;
+    padding: 16px;
+}
+
+.heading {
+    text-align: left;
+    margin-top: 0;
+}
+
+.description {
+    margin-top: 16px; /* Adjust the value to ensure proper spacing */
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 50%; /* Adjust the value as needed */
 }
