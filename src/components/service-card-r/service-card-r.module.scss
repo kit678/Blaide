@@ -1,6 +1,5 @@
 @import '@styles/theme.module.scss';
-.root {
-}
+
 .servicecard {
     border: 1px solid #c6b9b9;
     border-radius: 15px;
@@ -17,7 +16,7 @@
 
 .description {
     margin-top: 25px; /* Adjust the value to ensure proper spacing */
-    text-align: start;
+    text-align: left;
 }
 
 .image {
