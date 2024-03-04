@@ -17,6 +17,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
+                className={styles.herodiv}
             >
                 <div className={styles.title}>I&apos;M A TITLE</div>
                 <div className={styles.paragraph}>
