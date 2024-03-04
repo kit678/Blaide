@@ -16,9 +16,9 @@ export const ServiceCardR = ({ className, heading, description, img }: ServiceCa
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.servicecard}>
-                <h1 />
-                <textarea />
-                <img />
+                <h1>{heading}</h1>
+                <textarea defaultValue={description} />
+                <img src={img} alt={heading} />
             </div>
         </div>
     );
