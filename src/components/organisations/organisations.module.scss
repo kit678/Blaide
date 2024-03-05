@@ -12,7 +12,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    width: 80vw;
+    column-gap: 20px;
+    row-gap: 0px;
 }
 
 img {
