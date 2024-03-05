@@ -13,7 +13,13 @@ export interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <a href="/"><img src="../../assets/logos/blaide_logo.svg" alt="Blaide Logo" /></a>
+            <a href="/">
+                <img
+                    src="src/assets/logos/blaide_logo.svg"
+                    alt="Blaide Logo"
+                    className={styles.blaidelogo}
+                />
+            </a>
             <div className={styles.menu}>
                 <NavLink
                     to="/"

@@ -11,7 +11,7 @@
     font: $button-font;
 
     @media only screen and (max-width: $mobile-width) {
-        padding: 0 3em
+        padding: 0 3em;
     }
 }
 
@@ -24,4 +24,7 @@
 .active {
     color: $black;
     font-weight: 600;
+}
+.blaidelogo {
+    width: 100px;
 }

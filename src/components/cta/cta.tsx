@@ -2,7 +2,6 @@ import React, { useState, FormEvent } from 'react';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 
-// Removed the placeholder sendEmail function and imported sendTestEmail from emailService.js
 import homePageStyles from '../home-page/home-page.module.scss';
 
 export interface CtaProps {
@@ -26,8 +25,8 @@ export const Cta = ({ className }: CtaProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <form onSubmit={handleSubmit} className={styles.form}>
-                ... // other form elements
-                <button type="submit" className={classNames(styles.button, homePageStyles.button)}>
+                
+               
                 <textarea
                     required
                     placeholder="How can we help?"
@@ -50,7 +49,8 @@ export const Cta = ({ className }: CtaProps) => {
                     onChange={(e) => setEmail(e.target.value)}
                     className={styles.textarea}
                 />
-                <button type="button" onClick={handleSubmit}>
+                
+                <button type="submit" className={classNames(styles.button, homePageStyles.button)} onClick={handleSubmit}>
                     Submit
                 </button>
             </form>
