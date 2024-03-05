@@ -1,7 +1,9 @@
 @import '@styles/theme.module.scss';
 .root {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 620px; /* Adjust this value to fit two cards plus the gap */
+    margin: 0 auto; /* Center the grid in the viewport */
     gap: 20px;
     justify-content: center;
     padding: 20px;
