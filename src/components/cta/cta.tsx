@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { sendTestEmail } from '../../emailService';
+import { sendTestEmail } from 'emailService';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 
@@ -19,7 +19,7 @@ export const Cta = ({ className }: CtaProps) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleSubmit = (event) => {
+
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
         sendTestEmail({ query, phoneNumber, email });
