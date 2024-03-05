@@ -14,6 +14,7 @@ export default createBoard({
                     className="example-class"
                     heading="Sample Heading"
                     description="This is a sample description for the ServiceCardR component."
+                    img="../../../assets/img1.webp"
                     img="..\..\..\assets\img1.webp"
 
                  />,
