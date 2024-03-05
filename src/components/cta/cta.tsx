@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
+import { sendTestEmail } from '../../emailService';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 
-function sendEmail(data) {
-    // Placeholder function. Replace with an API call to your backend service.
-    console.log('Sending email with data:', data);
-    // The actual implementation would involve sending a POST request to your server.
-}
+// Removed the placeholder sendEmail function and imported sendTestEmail from emailService.js
 
 export interface CtaProps {
     className?: string;
@@ -23,8 +20,9 @@ export const Cta = ({ className }: CtaProps) => {
     const [email, setEmail] = useState('');
 
     const handleSubmit = (event) => {
+    const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
-        sendEmail({ query, phoneNumber, email });
+        sendTestEmail({ query, phoneNumber, email });
     };
 
     return (
@@ -54,4 +52,3 @@ export const Cta = ({ className }: CtaProps) => {
         </div>
     );
 };
-
