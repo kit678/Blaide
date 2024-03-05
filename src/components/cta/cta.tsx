@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import styles from './cta.module.scss';
 
 // Removed the placeholder sendEmail function and imported sendTestEmail from emailService.js
+import homePageStyles from '../home-page/home-page.module.scss';
 
 export interface CtaProps {
     className?: string;
@@ -25,6 +26,8 @@ export const Cta = ({ className }: CtaProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <form onSubmit={handleSubmit} className={styles.form}>
+                ... // other form elements
+                <button type="submit" className={classNames(styles.button, homePageStyles.button)}>
                 <textarea
                     required
                     placeholder="How can we help?"
