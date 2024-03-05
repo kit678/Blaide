@@ -15,12 +15,16 @@
     max-width: 400px; /* Maximum width of the form */
 }
 
-textarea {
+.textarea {
     resize: vertical;
     min-height: 100px;
+    font-weight: 300;
+    font-size: 25px;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

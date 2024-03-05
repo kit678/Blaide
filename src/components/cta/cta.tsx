@@ -8,7 +8,6 @@ export interface CtaProps {
     className?: string;
 }
 
-
 /**
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
@@ -17,7 +16,6 @@ export const Cta = ({ className }: CtaProps) => {
     const [query, setQuery] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
-
 
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
@@ -29,15 +27,17 @@ export const Cta = ({ className }: CtaProps) => {
             <form onSubmit={handleSubmit} className={styles.form}>
                 <textarea
                     required
-                    placeholder="Your query"
+                    placeholder="How can we help?"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
+                    className={styles.textarea}
                 />
                 <input
                     type="text"
-                    placeholder="Your phone number (optional)"
+                    placeholder="Phone (optional)"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
+                    className={styles.textarea}
                 />
                 <input
                     type="email"
@@ -45,8 +45,11 @@ export const Cta = ({ className }: CtaProps) => {
                     placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className={styles.textarea}
                 />
-                <button type="button" onClick={handleSubmit}>Submit</button>
+                <button type="button" onClick={handleSubmit}>
+                    Submit
+                </button>
             </form>
         </div>
     );
