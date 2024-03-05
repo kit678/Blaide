@@ -11,7 +11,7 @@ function sendEmail(data) {
 export interface CtaProps {
     className?: string;
 }
-}
+
 
 /**
  * This component was created using Codux's Default new component template.
@@ -54,4 +54,4 @@ export const Cta = ({ className }: CtaProps) => {
         </div>
     );
 };
-};
+
