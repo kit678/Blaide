@@ -21,7 +21,8 @@
 }
 
 img {
-    max-width: 100px; // Adjust the size as needed
+    width: 100px; // Explicitly set the width
     height: auto;
     filter: grayscale(100%);
+    flex: 0 0 auto; // Prevent the image from growing
 }
