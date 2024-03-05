@@ -1,5 +1,4 @@
 import React, { useState, FormEvent } from 'react';
-import { sendTestEmail } from './emailService';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 
@@ -20,9 +19,9 @@ export const Cta = ({ className }: CtaProps) => {
     const [email, setEmail] = useState('');
 
 
-    const handleSubmit = async (event: FormEvent) => {
+    const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
-        await sendTestEmail({ query, phoneNumber, email });
+        console.log('Query:', query, 'Phone Number:', phoneNumber, 'Email:', email);
     };
 
     return (
@@ -35,7 +34,7 @@ export const Cta = ({ className }: CtaProps) => {
                     onChange={(e) => setQuery(e.target.value)}
                 />
                 <input
-                    type="tel"
+                    type="text"
                     placeholder="Your phone number (optional)"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -43,7 +42,7 @@ export const Cta = ({ className }: CtaProps) => {
                 <input
                     type="email"
                     required
-                    placeholder="Your email"
+                    placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
