@@ -12,13 +12,14 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to send a test email
-function sendTestEmail() {
+function sendTestEmail({ query, phoneNumber, email }) {
     // Email options
     const mailOptions = {
         from: '"Test Server" <test@example.com>', // Sender address
-        to: 'recipient@example.com', // List of recipients
+        to: email, // Use the email provided by the user
         subject: 'Hello from MailHog!', // Subject line
-        text: 'This is a test email sent using MailHog.', // Plain text body
+        text: `Query: ${query}\nPhone Number: ${phoneNumber}`, // Include the query and phone number in the email body
+        html: `<b>This is a test email sent using MailHog.</b><br><p>${query}</p><p>${phoneNumber}</p>` // HTML body
         html: '<b>This is a test email sent using MailHog.</b>' // HTML body
     };
 

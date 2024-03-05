@@ -20,9 +20,9 @@ export const Cta = ({ className }: CtaProps) => {
     const [email, setEmail] = useState('');
 
 
-    const handleSubmit = (event: FormEvent) => {
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
-        sendTestEmail({ query, phoneNumber, email });
+        await sendTestEmail({ query, phoneNumber, email });
     };
 
     return (
@@ -47,7 +47,7 @@ export const Cta = ({ className }: CtaProps) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <button type="submit">Submit</button>
+                <button type="button" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     );
