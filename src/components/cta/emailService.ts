@@ -1,4 +1,4 @@
-import * as nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer';
 
 export interface EmailServiceParams {
     query: string;
@@ -25,7 +25,8 @@ export function sendTestEmail({ query, phoneNumber, email }: EmailServiceParams)
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
+    transporter.sendMail(mailOptions, (error: Error | null, info: nodemailer.SentMessageInfo) => {
+        if (error !== null) {
             console.error('Error sending test email:', error);
         } else {
             console.log('Test email sent:', info.response);
