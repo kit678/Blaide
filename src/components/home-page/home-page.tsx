@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import styles from './home-page.module.scss';
+import { ServiceSection } from '../service-section/service-section';
 
 export interface HomePageProps {
     className?: string;
@@ -35,6 +36,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                     className={styles.image}
                 />
             </motion.div>
+            <ServiceSection />
         </div>
     );
 };
