@@ -16,11 +16,17 @@ export const Organisations = ({ className }: OrganisationsProps) => {
                 Our team's expertise in innovation and automation has streamlined business processes, saving millions in man-hours.
             </h2>
             <div className={styles.imageCloud}>
-                <img src="src/assets/logos/logo1.png" alt="Logo 1" />
-                <img src="src/assets/logos/logo2.png" alt="Logo 2" />
-                <img src="src/assets/logos/logo3.png" alt="Logo 3" />
-                <img src="src/assets/logos/logo4.png" alt="Logo 4" />
-                <img src="src/assets/logos/logo5.png" alt="Logo 5" />
+                <img src="/assets/logos/baruch.svg" alt="Baruch College" />
+                <img src="/assets/logos/citrix.svg" alt="Citrix" />
+                <img src="/assets/logos/credit-suisse-1.svg" alt="Credit Suisse" />
+                <img src="/assets/logos/delta-airlines.svg" alt="Delta Airlines" />
+                <img src="/assets/logos/ibm.svg" alt="IBM" />
+                <img src="/assets/logos/illinois-university.svg" alt="University of Illinois" />
+                <img src="/assets/logos/illinois-university-2.svg" alt="University of Illinois" />
+                <img src="/assets/logos/manipal.png" alt="Manipal University" />
+                <img src="/assets/logos/morgan-stanley-new.svg" alt="Morgan Stanley" />
+                <img src="/assets/logos/stevens-institute-of-technology.svg" alt="Stevens Institute of Technology" />
+                <img src="/assets/logos/tata-logo.svg" alt="Tata" />
             </div>
         </div>
     );
