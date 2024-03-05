@@ -14,7 +14,7 @@ export default createBoard({
                     className="example-class"
                     heading="Sample Heading"
                     description="This is a sample description for the ServiceCardR component."
-                    img="path/to/sample-image.jpg"
+                    img="D:/Dev/codux/Blaide/src/assets/img1.webp"
                  />,
     isSnippet: true,
 });
