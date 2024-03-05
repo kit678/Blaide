@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { sendTestEmail } from './emailService.js';
+import { sendTestEmail } from './emailService';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 

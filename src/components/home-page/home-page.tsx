@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './home-page.module.scss';
 import { ServiceSection } from '../service-section/service-section';
 import { Organisations } from '../organisations/organisations';
+import { Cta } from '../cta/cta';
 
 export interface HomePageProps {
     className?: string;
@@ -39,6 +40,7 @@ export const HomePage = ({ className }: HomePageProps) => {
             </motion.div>
             <ServiceSection className={styles.servicesection} />
             <Organisations />
+            <Cta />
         </div>
     );
 };
