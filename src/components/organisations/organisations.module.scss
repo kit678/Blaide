@@ -1,3 +1,21 @@
 @import '@styles/theme.module.scss';
 .root {
+    text-align: center;
+    padding: 20px;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.imageCloud {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+img {
+    max-width: 100px; // Adjust the size as needed
+    height: auto;
 }
