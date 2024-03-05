@@ -36,7 +36,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                     className={styles.image}
                 />
             </motion.div>
-            <ServiceSection />
+            <ServiceSection className={styles.servicesection} />
         </div>
     );
 };
