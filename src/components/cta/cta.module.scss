@@ -1,3 +1,36 @@
 @import '@styles/theme.module.scss';
+
 .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take up full viewport height */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Maximum width of the form */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        background-color: #0056b3;
+    }
 }
