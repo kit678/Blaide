@@ -38,7 +38,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                     className={styles.image}
                 />
             </motion.div>
-            <ServiceSection className={styles.servicesection} />
+            <ServiceSection id="servicesection" className={styles.servicesection} />
             <Organisations />
             <Cta />
         </div>
