@@ -32,16 +32,17 @@
     display: flex;
     flex-direction: row;
     border: 1px solid #cec8c8;
-    border-radius: 15px;
+    border-radius: 40px;
     align-items: center;
     box-shadow: 2.97px 2.68px 2px #d2c4c4;
     margin: 20px;
     width: 40vw; /* Set the width to 30% of the viewport width */
+    padding: 20px;
 }
 .servicecardimg {
     display: flex;
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     padding: 15px;
     flex-direction: column;
 }
