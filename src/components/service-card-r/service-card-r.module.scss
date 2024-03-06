@@ -38,6 +38,10 @@
     margin: 20px;
     width: 40vw; /* Set the width to 30% of the viewport width */
     padding: 20px;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .servicecardimg {
     display: flex;
