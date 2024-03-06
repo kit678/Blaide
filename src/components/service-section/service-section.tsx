@@ -22,7 +22,7 @@ export const ServiceSection = ({ className }: ServiceSectionProps) => {
     });
 
     return (
-        <div className={classNames(styles.root, className)}>
+        <div id="servicesection" className={classNames(styles.root, className)}>
             {serviceCards}
         </div>
     );
