@@ -1,0 +1,53 @@
+@import '@styles/theme.module.scss';
+
+.servicecard {
+    border: 0px solid #c6b9b9;
+    border-radius: 0;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.heading {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 1.2; /* Adjust this value as needed to match the text size */
+}
+
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    text-align: end;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.image {
+    top: 0;
+    right: 0;
+    max-width: none; /* Adjust the value as needed */
+}
+.serviceCardRoot {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #cec8c8;
+    border-radius: 40px;
+    align-items: center;
+    box-shadow: 2.97px 2.68px 2px #d2c4c4;
+    margin: 20px;
+    width: 40vw;
+    padding: 20px;
+}
+.servicecardimg {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    flex-direction: column;
+}
+.cardheading {
+    font-weight: 700;
+    font-size: 25px;
+    text-align: end;
+}
