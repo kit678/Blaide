@@ -15,7 +15,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, className)}>
             <a href="/">
                 <img
-                    src="src/assets/logos/blaide_logo_color.svg"
+                    src="src/assets/logos/blaide_logo5.svg"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />
@@ -32,6 +32,12 @@ export const Header = ({ className }: HeaderProps) => {
                     className={({ isActive }) => classNames({ [styles.active]: isActive })}
                 >
                     About
+                </NavLink>
+                <NavLink
+                    to="/about"
+                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                >
+                    Services
                 </NavLink>
             </div>
         </div>
