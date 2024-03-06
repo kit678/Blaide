@@ -33,9 +33,9 @@ export const Header = ({ className }: HeaderProps) => {
                 >
                     About
                 </NavLink>
-                <NavLink
-                    to="/about"
-                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                <NavLink to="/#servicesection"
+                         className={({ isActive }) => classNames({ [styles.active]: isActive })}
+                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                 >
                     Services
                 </NavLink>
