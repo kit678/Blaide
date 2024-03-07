@@ -15,9 +15,11 @@ export const Header = ({ className }: HeaderProps) => {
     const location = useLocation();
 
     const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        const target = event.target as HTMLAnchorElement;
+        // Prevent the default anchor click behavior
+        event.preventDefault();
+        // Use the currentTarget instead of target to ensure we get the anchor element
+        const target = event.currentTarget;
         if (location.pathname === target.pathname && target.hash === '#servicesection') {
-            event.preventDefault();
             const element = document.getElementById(target.hash.substring(1));
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
