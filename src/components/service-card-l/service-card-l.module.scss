@@ -31,10 +31,10 @@
 .serviceCardRoot {
     display: flex;
     flex-direction: row;
-    border: 1px solid #cec8c8;
+    border: 0px solid #cec8c8;
     border-radius: 40px;
     align-items: center;
-    box-shadow: 2.97px 2.68px 2px #d2c4c4;
+    box-shadow: 8.17px 7.37px 2px #d2c4c4;
     margin: 20px;
     width: 40vw;
     padding: 20px;
@@ -42,6 +42,14 @@
     &:hover {
         transform: scale(1.05);
     }
+    background-image: linear-gradient(white, white);
+    background-position: 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: unset;
 }
 .servicecardimg {
     display: flex;

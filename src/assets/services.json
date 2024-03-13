@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "title": "Retrieval-Augmented Generation (RAG)",
+      "description": "This technology enhances the accuracy and relevance of AI-generated content by blending text generation with information retrieval. It's particularly valuable for enterprise applications where factual knowledge is crucial, such as chatbots and virtual assistants.",
+      "image": "src/assets/serviceIcons/photop/finetune.svg",
+      "alignment": "right"
+    },
+    {
+      "id": 2,
+      "title": "Customized Enterprise Generative AI Models",
+      "description": "With a focus on creating AI models tailored to specific business needs, there's a growing demand for AI systems that can meet niche requirements. This includes modifying existing AI models for more targeted applications, which is less costly than building new models from scratch.",
+      "image": "src/assets/serviceIcons/photop/rag.svg",
+      "alignment": "left"
+    },
+    {
+      "id": 3,
+      "title": "AI and Machine Learning Talent",
+      "description": "The need for skilled professionals in designing, training, testing, and maintaining AI and machine learning models continues to grow. This encompasses roles related to MLOps, a discipline focusing on deploying, monitoring, and maintaining AI systems in real-world settings.",
+      "image": "src/assets/serviceIcons/photop/customeragent.svg",
+      "alignment": "right"
+    },
+    {
+      "id": 4,
+      "title": "Democratized Generative AI",
+      "description": "Making generative AI more accessible to a broader audience, including non-technical workers, allows for the democratization of knowledge and skills within enterprises. This trend is driven by the integration of large language models and cloud computing.",
+      "image": "src/assets/serviceIcons/photop/recruitment.svg",
+      "alignment": "left"
+    },
+    {
+      "id": 5,
+      "title": "AI Trust, Risk, and Security Management (TRiSM)",
+      "description": "With the increasing accessibility of AI, there's a critical need for frameworks to manage the risks associated with AI models, including data protection and model monitoring.",
+      "image": "src/assets/serviceIcons/photop/codingassistance.svg",
+      "alignment": "right"
+    },
+    {
+      "id": 6,
+      "title": "AI-Augmented Development",
+      "description": "AI technologies are being used to assist software engineers in designing, coding, and testing applications, improving developer productivity and enabling more strategic work.",
+      "image": "src/assets/serviceIcons/photop/automation.svg",
+      "alignment": "left"
+    },
+    {
+      "id": 7,
+      "title": "Intelligent Applications",
+      "description": "Applications that adapt and respond autonomously are in demand, driven by AI-based services like machine learning. This includes applications that dynamically adapt to the user, addressing talent shortages and impacting industries significantly.",
+      "image": "src/assets/serviceIcons/photop/agents.svg",
+      "alignment": "right"
+    },
+    {
+      "id": 8,
+      "title": "Augmented-Connected Workforce",
+      "description": "Strategies that optimize the value derived from human workers using intelligent applications and analytics are becoming increasingly important.",
+      "image":  "src/assets/serviceIcons/photop/content.svg",
+      "alignment": "left"
+    }
+]
