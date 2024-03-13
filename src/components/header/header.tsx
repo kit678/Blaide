@@ -31,7 +31,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, className)}>
             <a href="/">
                 <img
-                    src="/public/images/blaide_logo5.svg"
+                    src="images/blaide_logo5.svg"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />
