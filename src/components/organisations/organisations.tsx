@@ -17,22 +17,22 @@ export const Organisations = ({ className }: OrganisationsProps) => {
                 processes, saving millions in man-hours.
             </h2>
             <div className={styles.imageCloud}>
-                <img src="/src/assets/logos/citrix.svg" alt="Citrix" />
-                <img src="/src/assets/logos/morgan.svg" alt="Morgan Stanley" />
-                <img src="/src/assets/logos/tata-logo.svg" alt="Tata" />
-                <img src="/src/assets/logos/credit-suisse-1.svg" alt="Credit Suisse" />
-                <img src="/src/assets/logos/delta-airlines.svg" alt="Delta Airlines" />
-                <img src="/src/assets/logos/ibm.svg" alt="IBM" />
+                <img src="./src/assets/logos/citrix.svg" alt="Citrix" />
+                <img src="./src/assets/logos/morgan.svg" alt="Morgan Stanley" />
+                <img src="./src/assets/logos/tata-logo.svg" alt="Tata" />
+                <img src="./src/assets/logos/credit-suisse-1.svg" alt="Credit Suisse" />
+                <img src="./src/assets/logos/delta-airlines.svg" alt="Delta Airlines" />
+                <img src="./src/assets/logos/ibm.svg" alt="IBM" />
                 <img
-                    src="/src/assets/logos/illinois-university-2.svg"
+                    src="./src/assets/logos/illinois-university-2.svg"
                     alt="University of Illinois"
                 />
-                <img src="/src/assets/logos/manipal.webp" alt="Manipal University" />
+                <img src="./src/assets/logos/manipal.webp" alt="Manipal University" />
                 <img
-                    src="/src/assets/logos/stevens-institute-of-technology.svg"
+                    src="./src/assets/logos/stevens-institute-of-technology.svg"
                     alt="Stevens Institute of Technology"
                 />
-                <img src="/src/assets/logos/baruch.svg" alt="Baruch College" />
+                <img src="./src/assets/logos/baruch.svg" alt="Baruch College" />
             </div>
         </div>
     );
