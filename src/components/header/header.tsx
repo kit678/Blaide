@@ -31,7 +31,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, className)}>
             <a href="/">
                 <img
-                    src="images/blaide_logo5.svg"
+                    src="images/blaid_logo_canva_black.png"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />

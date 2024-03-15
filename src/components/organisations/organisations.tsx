@@ -12,10 +12,7 @@ export interface OrganisationsProps {
 export const Organisations = ({ className }: OrganisationsProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <h2 className={styles.heading}>
-                Our team's expertise in innovation and automation has streamlined business
-                processes, saving millions in man-hours.
-            </h2>
+            <h2 className={styles.heading}>TRUSTED BY</h2>
             <div className={styles.imageCloud}>
                 <img src="images/logos/citrix.svg" alt="Citrix" />
                 <img src="images/logos/morgan.svg" alt="Morgan Stanley" />
@@ -25,10 +22,12 @@ export const Organisations = ({ className }: OrganisationsProps) => {
                 <img src="images/logos/ibm.svg" alt="IBM" />
                 <img src="images/logos/illinois-university-2.svg" alt="University of Illinois" />
                 <img src="images/logos/manipal.webp" alt="Manipal University" />
-                <img src="images/logos/stevens-institute-of-technology.svg" alt="Stevens Institute of Technology" />
+                <img
+                    src="images/logos/stevens-institute-of-technology.svg"
+                    alt="Stevens Institute of Technology"
+                />
                 <img src="images/logos/baruch.svg" alt="Baruch College" />
             </div>
-
         </div>
     );
 };
