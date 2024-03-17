@@ -9,8 +9,7 @@
     align-items: center;
     height: 4em;
     font: $button-font;
-    background-color: transparent; /* Fully transparent */
-    position: fixed; /* Make the header stay at the top of the page */
+    background-color: white; /* Fully transparent */ /* Make the header stay at the top of the page */
     top: 0;
     left: 0;
     width: 100%;
@@ -21,6 +20,9 @@
         padding: 0 3em;
     }
     border-radius: 0;
+    opacity: 0.8;
+    position: fixed;
+    background-image: none;
 }
 
 .menu {
