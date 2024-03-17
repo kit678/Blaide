@@ -8,12 +8,13 @@
     padding-right: 3.5em;
     align-items: center;
     height: 4em;
-    font: $button-font;
-    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+    font: $button-font; /* Fully transparent */
 
     @media only screen and (max-width: $mobile-width) {
         padding: 0 3em;
     }
+    opacity: 1;
+    border-radius: 0;
 }
 
 .menu {
