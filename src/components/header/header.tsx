@@ -12,8 +12,30 @@ export interface HeaderProps {
  */import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Header = ({ className }: HeaderProps) => {
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [headerVisible, setHeaderVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScrollTop > lastScrollTop) {
+                setHeaderVisible(false);
+            } else {
+                setHeaderVisible(true);
+            }
+            setLastScrollTop(currentScrollTop);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollTop]);
+
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [headerVisible, setHeaderVisible] = useState(true);
 
