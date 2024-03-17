@@ -8,12 +8,18 @@
     padding-right: 3.5em;
     align-items: center;
     height: 4em;
+    font: $button-font;
+    background-color: transparent; /* Fully transparent */
+    position: fixed; /* Make the header stay at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other content */
     font: $button-font; /* Fully transparent */
 
     @media only screen and (max-width: $mobile-width) {
         padding: 0 3em;
     }
-    opacity: 1;
     border-radius: 0;
 }
 
