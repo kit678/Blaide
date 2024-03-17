@@ -10,8 +10,31 @@ export interface HeaderProps {
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export const Header = ({ className }: HeaderProps) => {
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [headerVisible, setHeaderVisible] = useState(true);
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScrollTop > lastScrollTop) {
+                // Scrolling down
+                setHeaderVisible(false);
+            } else {
+                // Scrolling up
+                setHeaderVisible(true);
+            }
+            setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollTop]);
+
     const location = useLocation();
 
     const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -28,7 +51,7 @@ export const Header = ({ className }: HeaderProps) => {
     };
 
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={classNames(styles.root, { [styles.hidden]: !headerVisible }, className)}>
             <a href="/">
                 <img
                     src="images/blaid_logo_canva_black.png"
