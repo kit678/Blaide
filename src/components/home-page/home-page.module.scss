@@ -12,8 +12,7 @@
 .root {
     font: $large-font;
     position: relative; /* Ensure the video is positioned correctly */
-    background-size: cover; /* Ensure the background covers the viewport */
-    background-attachment: fixed;
+    background: none; /* No background since the video is fixed */
     background-position: center center;
     display: flex;
     flex-direction: column;
@@ -21,6 +20,7 @@
     background-color: transparent; /* Set the background color to transparent */
     padding-top: 2em;
     padding-bottom: 2em;
+    overflow: auto; /* Added to enable scrolling over the fixed video */
 }
 
 .title {
