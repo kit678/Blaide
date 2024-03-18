@@ -75,7 +75,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, { [styles.hidden]: !headerVisible }, className)}>
             <a href="/">
                 <img
-                    src="images/blaide_logo8-removebg-preview.png"
+                    src="images/blackblaide.png"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />
