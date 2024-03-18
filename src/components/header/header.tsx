@@ -75,7 +75,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, { [styles.hidden]: !headerVisible }, className)}>
             <a href="/">
                 <img
-                    src="images/blackblaide.png"
+                    src="images/blackblaide_canva.png"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />
