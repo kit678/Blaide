@@ -22,7 +22,7 @@ export const Cta = ({ className }: CtaProps) => {
     const [inputs, setInputs] = useState({
         email: '',
         message: '',
-        phone: '',
+        // phone field removed as it's not used in the current form state
     });
 
     const handleServerResponse = (ok, msg) => {
