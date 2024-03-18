@@ -36,4 +36,4 @@ export const ServiceSection = ({ className }: ServiceSectionProps) => {
         </div>
     );
 };
-    }
+    
