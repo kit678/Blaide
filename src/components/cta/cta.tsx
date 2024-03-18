@@ -1,8 +1,7 @@
-import React, { useState, FormEvent, ChangeEvent } from 'react';
+import React, { useState, FormEvent } from 'react';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
 
-import homePageStyles from '../home-page/home-page.module.scss';
 
 export interface CtaProps {
     className?: string;
@@ -16,6 +15,7 @@ export const Cta = ({ className }: CtaProps) => {
     const [status, setStatus] = useState({
         submitted: false,
         submitting: false,
+        info: { error: false, msg: '' },
     });
     const [inputs, setInputs] = useState({
         email: '',
@@ -27,6 +27,10 @@ export const Cta = ({ className }: CtaProps) => {
     const handleServerResponse = (ok: boolean, msg: string) => {
         setStatus((prevStatus) => ({
             ...prevStatus,
+    });
+
+    const handleServerResponse = (ok: boolean, msg: string) => {
+        setStatus({
             submitted: ok,
             submitting: false,
             info: { error: !ok, msg: msg },
@@ -42,6 +46,7 @@ export const Cta = ({ className }: CtaProps) => {
    
     const handleOnChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         // e.persist(); // This is not needed in latest React versions
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setInputs((prev) => ({
             ...prev,
             [e.target.id]: e.target.value,
@@ -49,6 +54,7 @@ export const Cta = ({ className }: CtaProps) => {
         setStatus({
             submitted: false,
             submitting: false,
+            info: { error: false, msg: '' },
             info: { error: false, msg: null },
         });
     };
@@ -67,6 +73,9 @@ export const Cta = ({ className }: CtaProps) => {
         .catch((error) => {
             handleServerResponse(false, error.response.data.error);
         });
+        event.preventDefault();
+        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+        // Form submission logic will be implemented here
     };
 
     return (
@@ -99,6 +108,8 @@ export const Cta = ({ className }: CtaProps) => {
                     onChange={handleOnChange}
                     className={styles.input} // Assuming there is a style for input in cta.module.scss
                 />
+                    className={styles.textarea}
+                />
                 <input
                     type="email"
                     required
@@ -115,6 +126,12 @@ export const Cta = ({ className }: CtaProps) => {
                     {!status.submitting
                         ? !status.submitted
                             ? 'Submit' // This line is correct and should remain unchanged.
+                    className={styles.textarea}
+                />
+                <button type="submit" disabled={status.submitting} className={styles.button}>
+                    {!status.submitting
+                        ? !status.submitted
+                            ? 'Submit'
                             : 'Submitted'
                         : 'Submitting...'}
                 </button>
