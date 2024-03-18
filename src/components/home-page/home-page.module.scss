@@ -6,13 +6,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Change to contain to prevent stretching */
     z-index: -1;
 }
 .root {
     font: $large-font;
     position: relative; /* Ensure the video is positioned correctly */
-    background-size: cover;
+    background-size: cover; /* Ensure the background covers the viewport */
     background-attachment: fixed;
     background-position: center center;
     display: flex;
