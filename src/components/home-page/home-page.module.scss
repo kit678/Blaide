@@ -1,8 +1,17 @@
 @import '@styles/theme.module.scss';
 
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 .root {
     font: $large-font;
-    background-image: url('/images/blaide_mod_compressed.mp4');
+    position: relative; // Ensure the video is positioned correctly
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
