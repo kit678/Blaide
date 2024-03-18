@@ -23,8 +23,8 @@
     &.hidden {
         top: -100%; /* Hide the header off-screen */
     }
-    border-radius: 0;
-    opacity: 0.8;
+    border-radius: 0px 0px 40px 40px;
+    opacity: 1;
     position: fixed;
     transition: top 0.3s ease-in-out;
     background-image: none;

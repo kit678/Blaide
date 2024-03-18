@@ -6,6 +6,7 @@
     align-items: center;
     height: 100vh; /* Take up full viewport height */
     opacity: 1;
+    border-radius: 0;
 }
 
 .form {
@@ -15,6 +16,7 @@
     width: 100%; /* Full width of the container */
     max-width: 400px; /* Maximum width of the form */
     opacity: 1;
+    border-radius: 0;
 }
 
 .textarea {
@@ -30,6 +32,7 @@
     background-attachment: scroll;
     background-origin: padding-box;
     background-clip: border-box;
+    border-radius: 40px;
 }
 
 input,

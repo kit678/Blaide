@@ -11,8 +11,7 @@ export interface HeaderProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useState, useEffect } from 'react';
-import { useState, useEffect } from 'react';
+
 
 export const Header = ({ className }: HeaderProps) => {
     const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -36,29 +35,7 @@ export const Header = ({ className }: HeaderProps) => {
         };
     }, [lastScrollTop]);
 
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [headerVisible, setHeaderVisible] = useState(true);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScrollTop > lastScrollTop) {
-                setHeaderVisible(false);
-            } else {
-                setHeaderVisible(true);
-            }
-            setLastScrollTop(currentScrollTop);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [lastScrollTop]);
-
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [headerVisible, setHeaderVisible] = useState(true);
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -98,7 +75,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className={classNames(styles.root, { [styles.hidden]: !headerVisible }, className)}>
             <a href="/">
                 <img
-                    src="images/blaid_logo_canva_black.png"
+                    src="images/blaide_logo8-removebg-preview.png"
                     alt="Blaide Logo"
                     className={styles.blaidelogo}
                 />
