@@ -25,7 +25,9 @@ export const Cta = ({ className }: CtaProps) => {
     });
 
     const handleServerResponse = (ok, msg) => {
-        setStatus({
+    const handleServerResponse = (ok: boolean, msg: string) => {
+        setStatus((prevStatus) => ({
+            ...prevStatus,
             submitted: ok,
             submitting: false,
             info: { error: !ok, msg: msg },
@@ -39,7 +41,8 @@ export const Cta = ({ className }: CtaProps) => {
     };
 
     const handleOnChange = (e) => {
-        e.persist();
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        // e.persist(); // This is not needed in latest React versions
         setInputs((prev) => ({
             ...prev,
             [e.target.id]: e.target.value,
@@ -103,7 +106,7 @@ export const Cta = ({ className }: CtaProps) => {
                     id="email"
                     value={inputs.email}
                     onChange={handleOnChange}
-                    className={styles.textarea}
+                    className={styles.textarea} // This line is correct and should remain unchanged.
                 />
                 
                 <button type="submit" className={classNames(styles.button, homePageStyles.button)} onClick={handleSubmit}>
