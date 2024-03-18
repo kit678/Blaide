@@ -17,6 +17,7 @@ export interface HomePageProps {
 export const HomePage = ({ className }: HomePageProps) => {
     return (
         <div className={classNames(styles.root, className)}>
+            {/* Ensure the videoBackground class is applied to the video element */}
             <video autoPlay loop muted playsInline className={styles.videoBackground}>
                 <source src={videoBackground} type="video/mp4" />
                 Your browser does not support the video tag.

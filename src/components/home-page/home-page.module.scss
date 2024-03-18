@@ -11,14 +11,14 @@
 }
 .root {
     font: $large-font;
-    position: relative; // Ensure the video is positioned correctly
+    position: relative; /* Ensure the video is positioned correctly */
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
-    background-color: $snow-white; // Set the background color to white
+    background-color: transparent; /* Set the background color to transparent */
     padding-top: 2em;
     padding-bottom: 2em;
 }
