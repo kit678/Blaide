@@ -1,5 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import classNames from 'classnames';
+import axios from 'axios';
 import styles from './cta.module.scss';
 
 import homePageStyles from '../home-page/home-page.module.scss';
@@ -13,13 +14,57 @@ export interface CtaProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const Cta = ({ className }: CtaProps) => {
-    const [query, setQuery] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState({
+        submitted: false,
+        submitting: false,
+        info: { error: false, msg: null },
+    });
+    const [inputs, setInputs] = useState({
+        email: '',
+        message: '',
+    });
 
-    const handleSubmit = (event: FormEvent) => {
+    const handleServerResponse = (ok, msg) => {
+        setStatus({
+            submitted: ok,
+            submitting: false,
+            info: { error: !ok, msg: msg },
+        });
+        if (ok) {
+            setInputs({
+                email: '',
+                message: '',
+            });
+        }
+    };
+
+    const handleOnChange = (e) => {
+        e.persist();
+        setInputs((prev) => ({
+            ...prev,
+            [e.target.id]: e.target.value,
+        }));
+        setStatus({
+            submitted: false,
+            submitting: false,
+            info: { error: false, msg: null },
+        });
+    };
+
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
-        console.log('Query:', query, 'Phone Number:', phoneNumber, 'Email:', email);
+        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+        await axios({
+            method: 'POST',
+            url: 'https://formspree.io/f/{your-form-id}',
+            data: inputs,
+        })
+        .then((response) => {
+            handleServerResponse(true, 'Thank you, your message has been submitted.');
+        })
+        .catch((error) => {
+            handleServerResponse(false, error.response.data.error);
+        });
     };
 
     return (
@@ -30,30 +75,45 @@ export const Cta = ({ className }: CtaProps) => {
                 <textarea
                     required
                     placeholder="How can we help?"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    id="message"
+                    value={inputs.message}
+                    onChange={handleOnChange}
                     className={styles.textarea}
                 />
                 <input
                     type="text"
                     placeholder="Phone (optional)"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    id="phone"
+                    value={inputs.phone}
+                    onChange={handleOnChange}
                     className={styles.textarea}
                 />
                 <input
                     type="email"
                     required
                     placeholder="Your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    id="email"
+                    value={inputs.email}
+                    onChange={handleOnChange}
                     className={styles.textarea}
                 />
                 
                 <button type="submit" className={classNames(styles.button, homePageStyles.button)} onClick={handleSubmit}>
-                    Submit
+
+                <button type="submit" disabled={status.submitting} className={classNames(styles.button, homePageStyles.button)}>
+                    {!status.submitting
+                        ? !status.submitted
+                            ? 'Submit'
+                            : 'Submitted'
+                        : 'Submitting...'}
                 </button>
             </form>
+            {status.info.error && (
+                <div className="error">Error: {status.info.msg}</div>
+            )}
+            {!status.info.error && status.info.msg && (
+                <p>{status.info.msg}</p>
+            )}
         </div>
     );
 };
