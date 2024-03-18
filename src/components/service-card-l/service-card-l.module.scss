@@ -37,10 +37,6 @@
     box-shadow: 8.17px 7.37px 2px #d2c4c4;
     margin: 20px;
     padding: 20px;
-    transition: transform 0.3s ease;
-    &:hover {
-        transform: scale(1.05);
-    }
     background-image: linear-gradient(white, white);
     background-position: 0%;
     background-size: auto;
