@@ -1,6 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import classNames from 'classnames';
-import axios, { AxiosResponse, AxiosError } from 'axios';
 import styles from './cta.module.scss';
 
 import homePageStyles from '../home-page/home-page.module.scss';
@@ -17,7 +16,6 @@ export const Cta = ({ className }: CtaProps) => {
     const [status, setStatus] = useState({
         submitted: false,
         submitting: false,
-        info: { error: false, msg: null },
     });
     const [inputs, setInputs] = useState({
         email: '',
@@ -25,7 +23,7 @@ export const Cta = ({ className }: CtaProps) => {
         // phone field removed as it's not used in the current form state
     });
 
-    const handleServerResponse = (ok, msg) => {
+ 
     const handleServerResponse = (ok: boolean, msg: string) => {
         setStatus((prevStatus) => ({
             ...prevStatus,
@@ -41,7 +39,7 @@ export const Cta = ({ className }: CtaProps) => {
         }
     };
 
-    const handleOnChange = (e) => {
+   
     const handleOnChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         // e.persist(); // This is not needed in latest React versions
         setInputs((prev) => ({
@@ -59,7 +57,7 @@ export const Cta = ({ className }: CtaProps) => {
         event.preventDefault(); // This line is correct and should remain unchanged.
         setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
         await axios({
-            method: 'POST',
+            method: 'POST', // Ensure the method is set to POST
             url: 'https://formspree.io/f/{your-form-id}',
             data: inputs,
         })
