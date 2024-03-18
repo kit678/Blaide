@@ -22,6 +22,7 @@ export const Cta = ({ className }: CtaProps) => {
     const [inputs, setInputs] = useState({
         email: '',
         message: '',
+        phone: '',
     });
 
     const handleServerResponse = (ok, msg) => {
@@ -82,6 +83,7 @@ export const Cta = ({ className }: CtaProps) => {
                     value={inputs.message}
                     onChange={handleOnChange}
                     className={styles.textarea} // This line is correct and should remain unchanged.
+                    className={styles.textarea} // This line is correct and should remain unchanged.
                 />
                 <input
                     type="text"
@@ -114,7 +116,7 @@ export const Cta = ({ className }: CtaProps) => {
                 </button> // This line closes the button tag correctly.
                     {!status.submitting
                         ? !status.submitted
-                            ? 'Submit'
+                            ? 'Submit' // This line is correct and should remain unchanged.
                             : 'Submitted'
                         : 'Submitting...'}
                 </button>
