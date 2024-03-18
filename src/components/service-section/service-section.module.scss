@@ -1,13 +1,45 @@
 @import '@styles/theme.module.scss';
 .root {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-    margin: 0 auto; /* Center the grid in the viewport */
-    gap: 20px;
-    justify-content: center;
+    display: block;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto; /* Center the section in the viewport */
     padding: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100vw;
+    box-sizing: border-box;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carouselControls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carouselControlPrev,
+.carouselControlNext {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+    width: 50px;
+    position: relative;
+    top: -10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+    .root {
+        padding: 40px;
+    }
 }
