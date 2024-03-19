@@ -21,9 +21,7 @@
 
 .textarea {
     resize: vertical;
-    min-height: 100px;
     font-weight: 300;
-    font-size: 25px;
     opacity: 1;
     background-image: linear-gradient(white, white);
     background-position: 0%;
@@ -33,6 +31,9 @@
     background-origin: padding-box;
     background-clip: border-box;
     border-radius: 40px;
+    font-size: 20px;
+    border: 0px solid rgb(204, 204, 204);
+    padding: 20px;
 }
 
 input,
@@ -44,3 +45,8 @@ button {
     margin-top: 0px;
 }
 
+.contactform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,147 +1,68 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useRef, FormEvent } from 'react';
 import classNames from 'classnames';
 import styles from './cta.module.scss';
+import emailjs from '@emailjs/browser';
 
+import homePageStyles from '../home-page/home-page.module.scss';
 
 export interface CtaProps {
     className?: string;
 }
 
-/**
- * This component was created using Codux's Default new component template.
- * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
- */
 export const Cta = ({ className }: CtaProps) => {
-    const [status, setStatus] = useState({
-        submitted: false,
-        submitting: false,
-        info: { error: false, msg: '' },
-    });
-    const [inputs, setInputs] = useState({
-        email: '',
-        message: '',
-        // phone field removed as it's not used in the current form state
-    });
+    // Specify the type of the element that useRef is referring to
+    const form = useRef<HTMLFormElement>(null);
 
- 
-    const handleServerResponse = (ok: boolean, msg: string) => {
-        setStatus((prevStatus) => ({
-            ...prevStatus,
-    });
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
-    const handleServerResponse = (ok: boolean, msg: string) => {
-        setStatus({
-            submitted: ok,
-            submitting: false,
-            info: { error: !ok, msg: msg },
-        });
-        if (ok) {
-            setInputs({
-                email: '',
-                message: '',
-            });
+        if (form.current) {
+            emailjs
+                .sendForm('service_ewo010m', 'template_ns2g241', form.current, 'U1nb15Gy75hDrL0Qj')
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
         }
-    };
-
-   
-    const handleOnChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        // e.persist(); // This is not needed in latest React versions
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setInputs((prev) => ({
-            ...prev,
-            [e.target.id]: e.target.value,
-        }));
-        setStatus({
-            submitted: false,
-            submitting: false,
-            info: { error: false, msg: '' },
-            info: { error: false, msg: null },
-        });
-    };
-
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault(); // This line is correct and should remain unchanged.
-        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-        await axios({
-            method: 'POST', // Ensure the method is set to POST
-            url: 'https://formspree.io/f/{your-form-id}',
-            data: inputs,
-        })
-        .then((response) => {
-            handleServerResponse(true, 'Thank you, your message has been submitted.'); // This line is correct and should remain unchanged.
-        })
-        .catch((error) => {
-            handleServerResponse(false, error.response.data.error);
-        });
-        event.preventDefault();
-        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-        // Form submission logic will be implemented here
     };
 
     return (
         <div className={classNames(styles.root, className)}>
-            <form onSubmit={handleSubmit} className={styles.form}>
-                
-               
-                <textarea
-                    required
-                    placeholder="How can we help?"
-                    id="message"
-                    value={inputs.message}
-                    onChange={handleOnChange}
-                    className={styles.textarea} // This line is correct and should remain unchanged.
-                    className={styles.textarea} // This line is correct and should remain unchanged.
-                />
+            <form ref={form} onSubmit={sendEmail} className={styles.form}>
                 <input
                     type="text"
-                    placeholder="Phone (optional)"
-                    id="phone"
-                    value={inputs.phone}
-                    onChange={handleOnChange}
-                    className={styles.textarea} // This line is correct and should remain unchanged.
-                />
-                <input
-                    type="text"
-                    placeholder="Phone (optional)"
-                    id="phone"
-                    value={inputs.phone || ''}
-                    onChange={handleOnChange}
-                    className={styles.input} // Assuming there is a style for input in cta.module.scss
-                />
+                    name="user_name"
                     className={styles.textarea}
+                    placeholder="Name"
                 />
                 <input
                     type="email"
-                    required
-                    placeholder="Your email address"
-                    id="email"
-                    value={inputs.email}
-                    onChange={handleOnChange}
-                    className={styles.textarea} // This line is correct and should remain unchanged.
-                />
-                
-                <button type="submit" className={classNames(styles.button, homePageStyles.button)} onClick={handleSubmit}>
-
-                </button> // This line closes the button tag correctly.
-                    {!status.submitting
-                        ? !status.submitted
-                            ? 'Submit' // This line is correct and should remain unchanged.
+                    name="user_email"
                     className={styles.textarea}
+                    placeholder="Email"
                 />
-                <button type="submit" disabled={status.submitting} className={styles.button}>
-                    {!status.submitting
-                        ? !status.submitted
-                            ? 'Submit'
-                            : 'Submitted'
-                        : 'Submitting...'}
-                </button>
+                <input
+                    type="phone"
+                    name="user_phone"
+                    className={styles.textarea}
+                    placeholder="Phone"
+                />
+                <textarea
+                    name="message"
+                    className={styles.textarea}
+                    placeholder="How can we help?"
+                />
+                <button
+                    type="submit"
+                    className={classNames(styles.button, homePageStyles.button)}
+                    value="Send"> Submit</button>
+                    
+                    
             </form>
-            {status.info.error && (
-                <div className="error">Error: {status.info.msg}</div>
-            )}
-            {!status.info.error && status.info.msg && (
-                <p>{status.info.msg}</p>
-            )}
         </div>
     );
 };
