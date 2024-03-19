@@ -59,9 +59,11 @@ export const Cta = ({ className }: CtaProps) => {
                 <button
                     type="submit"
                     className={classNames(styles.button, homePageStyles.button)}
-                    value="Send"> Submit</button>
-                    
-                    
+                    value="Send"
+                >
+                    {' '}
+                    Submit
+                </button>
             </form>
         </div>
     );
