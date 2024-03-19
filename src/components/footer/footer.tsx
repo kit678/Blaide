@@ -19,7 +19,7 @@ export const Footer = ({ className }: FooterProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.details}>
-                <div>Contact Jane Doe</div>
+                <div>Contact: info@blaidelabs.com Phone:(929) 228 7526</div>
             </div>
             <div className={styles.social}>
                 <a href="/">

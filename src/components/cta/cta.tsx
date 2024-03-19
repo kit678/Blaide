@@ -55,7 +55,7 @@ export const Cta = ({ className }: CtaProps) => {
                     name="message"
                     className={styles.textarea}
                     placeholder="How can we help?"
-                    style={{ minHeight: '100px' }}
+                    style={{ minHeight: '200px' }}
                 />
                 <button
                     type="submit"
