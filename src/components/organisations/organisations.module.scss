@@ -31,7 +31,7 @@
 }
 
 .imageCloud img {
-    max-width: 100px; // Adjust the size as needed
+    width: 6em; // Use 'em' for scalable dimensions
     height: auto;
     filter: grayscale(100%);
 }

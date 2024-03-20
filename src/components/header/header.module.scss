@@ -3,18 +3,16 @@
 .root {
     display: flex;
     flex-direction: row;
-    padding-left: 3em;
+    padding: 0 3em; // Unify padding for left and right
     justify-content: space-between;
-    padding-right: 3.5em;
     align-items: center;
     height: 4em;
     font: $button-font;
-    background-color: white; /* Fully transparent */ /* Make the header stay at the top of the page */
+    background-color: $white; // Use variable for consistency
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure the header is above other content */
-    font: $button-font; /* Fully transparent */
 
     @media only screen and (max-width: $mobile-width) {
         padding: 0 3em;
@@ -25,11 +23,8 @@
     }
     border-radius: 0px 0px 40px 40px;
     opacity: 1;
-    position: fixed;
-    transition: top 0.3s ease-in-out;
-    background-image: none;
-    border: 1px solid black;
-    border-top: 0px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add a subtle shadow
+    border: none; // Remove border for a cleaner look
 }
 
 .menu {
