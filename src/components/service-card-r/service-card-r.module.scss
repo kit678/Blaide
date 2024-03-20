@@ -41,6 +41,7 @@
     border-radius: 40px;
     align-items: center;
     box-shadow: 2.97px 2.68px 2px #d2c4c4;
+    margin: 20px;
     margin: 20px; /* Set the width to 30% of the viewport width */
     padding: 20px;
     background-image: linear-gradient(white, white);
@@ -52,6 +53,7 @@
     background-clip: border-box;
     opacity: 1;
     height: 70vh;
+    overflow: visible;
 }
 .servicecardimg {
     display: flex;
