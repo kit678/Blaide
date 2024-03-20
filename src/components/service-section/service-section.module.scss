@@ -5,7 +5,6 @@
     margin: 0 auto; /* Center the section in the viewport */
     padding: 0px;
     box-sizing: border-box;
-    height: 100vh;
     text-align: start;
     flex-direction: column;
     align-content: end;
@@ -13,9 +12,10 @@
 }
 
 .carousel {
-    position: relative;
     width: 100%;
     text-align: start;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .carouselControls {
