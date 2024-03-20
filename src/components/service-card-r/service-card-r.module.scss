@@ -6,6 +6,7 @@
     display: flex;
     padding: 15px;
     flex-direction: column;
+    width: 60%;
 }
 
 .heading {
@@ -36,7 +37,7 @@
     align-items: center;
     box-shadow: 2.97px 2.68px 2px #d2c4c4;
     margin: 20px;
-    border: 1px solid #cec8c8;
+    border: 0px solid #cec8c8;
     border-radius: 40px;
     align-items: center;
     box-shadow: 2.97px 2.68px 2px #d2c4c4;
@@ -54,8 +55,7 @@
 }
 .servicecardimg {
     display: flex;
-    width: 150px;
-    height: 150px;
+    height: 150%;
     padding: 15px;
     flex-direction: column;
 }

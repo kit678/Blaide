@@ -3,21 +3,21 @@
       "id": 1,
       "title": "Retrieval-Augmented Generation (RAG)",
       "description": "This technology enhances the accuracy and relevance of AI-generated content by blending text generation with information retrieval. It's particularly valuable for enterprise applications where factual knowledge is crucial, such as chatbots and virtual assistants.",
-      "image": "images/photop/finetune.svg",
+      "image": "images/photop/rag.svg",
       "alignment": "right"
   },
   {
       "id": 2,
       "title": "Customized Enterprise Generative AI Models",
       "description": "With a focus on creating AI models tailored to specific business needs, there's a growing demand for AI systems that can meet niche requirements. This includes modifying existing AI models for more targeted applications, which is less costly than building new models from scratch.",
-      "image": "images/photop/rag.svg",
+      "image": "images/photop/finetune.svg",
       "alignment": "left"
   },
   {
       "id": 3,
       "title": "AI and Machine Learning Talent",
       "description": "The need for skilled professionals in designing, training, testing, and maintaining AI and machine learning models continues to grow. This encompasses roles related to MLOps, a discipline focusing on deploying, monitoring, and maintaining AI systems in real-world settings.",
-      "image": "images/photop/customeragent.svg",
+      "image": "images/photop/recruitment.svg",
       "alignment": "right"
   },
   {

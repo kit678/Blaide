@@ -6,6 +6,7 @@
     display: flex;
     padding: 15px;
     flex-direction: column;
+    width: 60%;
 }
 
 .heading {
@@ -33,7 +34,6 @@
     flex-direction: row;
     border: 0px solid #cec8c8;
     border-radius: 40px;
-    align-items: center;
     box-shadow: 8.17px 7.37px 2px #d2c4c4;
     margin: 20px;
     padding: 20px;
@@ -46,13 +46,14 @@
     background-clip: border-box;
     background-color: unset;
     height: 70vh;
+    align-items: center;
+    justify-content: space-between;
 }
 .servicecardimg {
     display: flex;
-    width: 150px;
-    height: 150px;
     padding: 15px;
     flex-direction: column;
+    height: 150%;
 }
 .cardheading {
     font-weight: 700;
