@@ -1,4 +1,6 @@
 @import '@styles/theme.module.scss';
+$tablet-width: 768px; // Define the tablet-width variable if it's not defined in the theme.module.scss
+
 .root {
     display: flex;
     max-width: 100%;
