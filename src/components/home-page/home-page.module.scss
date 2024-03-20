@@ -2,21 +2,33 @@
 
 .videoBackground {
     position: fixed; /* Changed from absolute to fixed */
+.videoBackground {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     object-fit: cover; /* Change to cover to ensure it fills the screen */
     z-index: -1;
 }
 .root {
-    font: $large-font;
+    font-size: $large-font-size; // Use font-size for clarity
+    font-weight: $large-font-weight; // Use font-weight for clarity
+    line-height: $large-line-height; // Use line-height for clarity
+    position: relative;
+    background: none;
     position: relative; /* This can remain as is, since .videoBackground is now fixed */
     background: none; /* No need to change this */
     background-position: center center;
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
+    background-color: transparent;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    align-items: center;
+    overflow: visible;
     background-color: transparent; /* Set the background color to transparent */
     padding-top: 2em;
     padding-bottom: 2em;
@@ -25,7 +37,9 @@
 }
 
 .title {
-    font: $title-font;
+    font-size: $title-font-size; // Use font-size for clarity
+    font-weight: $title-font-weight; // Use font-weight for clarity
+    line-height: $title-line-height; // Use line-height for clarity
     text-align: center;
     letter-spacing: 0.4rem;
 
@@ -39,7 +53,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5em;
-    font: $paragraph-font;
+    font-size: $paragraph-font-size; // Use font-size for clarity
+    font-weight: $paragraph-font-weight; // Use font-weight for clarity
+    line-height: $paragraph-line-height; // Use line-height for clarity
 
     @media only screen and (max-width: $mobile-width) {
         font-size: 1rem;
@@ -51,7 +67,9 @@
 }
 
 .button {
-    font: $button-font;
+    font-size: $button-font-size; // Use font-size for clarity
+    font-weight: $button-font-weight; // Use font-weight for clarity
+    line-height: $button-line-height; // Use line-height for clarity
     text-align: center;
     background-color: $black;
     color: $white;
