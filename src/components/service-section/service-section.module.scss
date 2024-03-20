@@ -1,13 +1,14 @@
 @import '@styles/theme.module.scss';
 .root {
-    display: block;
-    position: relative;
+    display: flex;
     max-width: 100%;
     margin: 0 auto; /* Center the section in the viewport */
     padding: 20px;
     box-sizing: border-box;
     height: 100vh;
     text-align: start;
+    flex-direction: column;
+    align-content: end;
 }
 
 .carousel {
