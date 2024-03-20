@@ -54,12 +54,13 @@
     opacity: 1;
     height: 70vh;
     overflow: visible;
+    justify-content: space-between;
 }
 .servicecardimg {
     display: flex;
-    height: 150%;
     padding: 15px;
     flex-direction: column;
+    width: 1000px;
 }
 .cardheading {
     font-weight: 700;

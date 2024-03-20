@@ -3,16 +3,16 @@
     display: flex;
     max-width: 100%;
     margin: 0 auto; /* Center the section in the viewport */
-    padding: 20px;
+    padding: 0px;
     box-sizing: border-box;
     height: 100vh;
     text-align: start;
     flex-direction: column;
     align-content: end;
+    border: 0px solid #faf3f3;
 }
 
 .carousel {
-    overflow: hidden;
     position: relative;
     width: 100%;
     text-align: start;
