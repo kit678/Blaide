@@ -50,15 +50,27 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        height: auto;
+    }
 }
 .servicecardimg {
     display: flex;
     padding: 15px;
     justify-content: center;
     height: 100%;
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
 }
 .cardheading {
     font-weight: 700;
     font-size: 25px;
     text-align: end;
+    @media (max-width: $mobile-width) {
+        text-align: center;
+    }
 }
