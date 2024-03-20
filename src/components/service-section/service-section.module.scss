@@ -23,12 +23,12 @@ $tablet-width: 768px; // Define the tablet-width variable if it's not defined in
     text-align: start;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     @media (max-width: $tablet-width) {
         flex-direction: column;
     }
+    flex-direction: row;
 }
 
 .carouselControls {
