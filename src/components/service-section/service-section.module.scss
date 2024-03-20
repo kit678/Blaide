@@ -1,61 +1,53 @@
 @import '@styles/theme.module.scss';
 $tablet-width: 768px; // Define the tablet-width variable if it's not defined in the theme.module.scss
 
-.root {
+ .root {
     display: flex;
-    max-width: 100%;
-    margin: 0 auto; /* Center the section in the viewport */
-    margin: 0 auto;
-    padding: 0px;
-    box-sizing: border-box;
-    text-align: start;
-    flex-direction: column;
-    align-content: end;
-    border: 0px solid #faf3f3;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel {
     width: 100%;
-    text-align: start;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+ }
+
+ .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     @media (max-width: $tablet-width) {
         flex-direction: column;
     }
-    flex-direction: row;
-}
+ }
 
-.carouselControls {
-    text-align: center;
+ .carouselControls {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-}
+ }
 
-.carouselControlPrev,
-.carouselControlNext {
-    background-color: #fff;
-    border: 1px solid #ccc;
+ .carouselControlPrev,
+ .carouselControlNext {
+    background-color: $white;
+    border: 1px solid $charcoal-black;
     border-radius: 50%;
     cursor: pointer;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
-    height: 50px; /* Adjust line-height to vertically center the text */
-    margin: 0 10px;
+    height: 50px;
     width: 50px;
+    margin: 0 10px;
     position: relative;
     top: -10px;
     user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
-    text-align: center;
-    direction: ltr;
-    line-height: 0px;
-}
+ }
 
 @media (min-width: 768px) {
     .root {
