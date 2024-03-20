@@ -63,13 +63,13 @@
 .servicecardimg {
     display: flex;
     padding: 15px;
-    flex-direction: column;
-    width: 1000px;
     @media (max-width: $mobile-width) {
         width: 100%;
         height: auto;
         padding: 0;
     }
+    height: 100%;
+    justify-content: center;
 }
 .cardheading {
     font-weight: 700;

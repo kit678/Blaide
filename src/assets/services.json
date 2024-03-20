@@ -22,37 +22,10 @@
   },
   {
       "id": 4,
-      "title": "Democratized Generative AI",
-      "description": "Making generative AI more accessible to a broader audience, including non-technical workers, allows for the democratization of knowledge and skills within enterprises. This trend is driven by the integration of large language models and cloud computing.",
-      "image": "images/photop/recruitment.svg",
-      "alignment": "left"
-  },
-  {
-      "id": 5,
       "title": "AI Trust, Risk, and Security Management (TRiSM)",
       "description": "With the increasing accessibility of AI, there's a critical need for frameworks to manage the risks associated with AI models, including data protection and model monitoring.",
       "image": "images/photop/codingassistant.svg",
       "alignment": "right"
-  },
-  {
-      "id": 6,
-      "title": "AI-Augmented Development",
-      "description": "AI technologies are being used to assist software engineers in designing, coding, and testing applications, improving developer productivity and enabling more strategic work.",
-      "image": "images/photop/automation.svg",
-      "alignment": "left"
-  },
-  {
-      "id": 7,
-      "title": "Intelligent Applications",
-      "description": "Applications that adapt and respond autonomously are in demand, driven by AI-based services like machine learning. This includes applications that dynamically adapt to the user, addressing talent shortages and impacting industries significantly.",
-      "image": "images/photop/agents.svg",
-      "alignment": "right"
-  },
-  {
-      "id": 8,
-      "title": "Augmented-Connected Workforce",
-      "description": "Strategies that optimize the value derived from human workers using intelligent applications and analytics are becoming increasingly important.",
-      "image": "images/photop/content.svg",
-      "alignment": "left"
   }
+ 
 ]
