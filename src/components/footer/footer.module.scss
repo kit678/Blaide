@@ -24,6 +24,11 @@
         padding-right: 1em;
         padding-left: 1em;
     }
+    @media only screen and (max-width: $mobile-width) {
+        justify-content: center;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
 }
 
 .social {
