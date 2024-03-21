@@ -21,8 +21,8 @@
 
 .image {
     top: 0;
-    right: 0;
-    max-width: none; /* Adjust the value as needed */
+    right: 0; /* Adjust the value as needed */
+    width: 100%;
 }
 .serviceCardRoot {
     display: flex;
@@ -30,7 +30,6 @@
     border: 0px solid #cec8c8;
     border-radius: 40px;
     align-items: center;
-    box-shadow: 8.17px 7.37px 2px #d2c4c4;
     margin: 20px;
     padding: 20px;
     background-image: linear-gradient(white, white);
@@ -45,7 +44,6 @@
     align-items: center;
     overflow: visible;
     flex-direction: row;
-    justify-content: center;
     width: 100%; /* Ensure all cards have the same width */
     @media (max-width: $mobile-width) {
         flex-direction: column;
@@ -57,13 +55,13 @@
 .servicecardimg {
     display: flex;
     padding: 15px;
-    max-width: 100%;
-    max-height: 100%;
 
     @media (max-width: 100%) {
         height: auto;
         width: auto; /* Allow the card to fit the mobile screen */
     }
+    width: auto;
+    max-width: 500px;
 }
 .cardheading {
     font-size: 2.5vw; // Adjusted for better scaling before mobile breakpoint
