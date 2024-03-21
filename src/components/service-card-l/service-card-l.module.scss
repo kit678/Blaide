@@ -83,15 +83,15 @@
         width: 100%;
         height: auto;
         padding: 0;
+    justify-content: center;
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        height: auto;
     }
 }
 .cardheading {
-    font-weight: 700;
-    font-size: 25px;
+    font: $title-text; // Corrected variable name
     text-align: end;
-    @media (max-width: $mobile-width) {
-        text-align: center;
-    }
     @media (max-width: $mobile-width) {
         text-align: center;
     }
