@@ -33,7 +33,7 @@ $tablet-width: 768px; // Define the tablet-width variable if it's not defined in
  .carouselControlPrev,
  .carouselControlNext {
     background-color: $white;
-    border: 1px solid $charcoal-black;
+    border: 1px solid $charcoal;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
