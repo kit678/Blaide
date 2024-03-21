@@ -19,6 +19,7 @@ $tablet-width: 768px; // Define the tablet-width variable if it's not defined in
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
     @media (max-width: $tablet-width) {
         flex-direction: column;
     }

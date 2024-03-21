@@ -37,6 +37,9 @@
     align-items: center;
     box-shadow: 2.97px 2.68px 2px #d2c4c4;
     margin: 20px;
+.serviceCardRoot {
+    display: flex;
+    flex-direction: row;
     border: 0px solid #cec8c8;
     border-radius: 40px;
     align-items: center;
@@ -51,15 +54,19 @@
     background-attachment: scroll;
     background-origin: padding-box;
     background-clip: border-box;
+    background-color: unset;
     opacity: 1;
     height: 70vh;
     overflow: visible;
     justify-content: space-between;
+    width: 100%; /* Ensure all cards have the same width */
     @media (max-width: $mobile-width) {
         flex-direction: column-reverse;
         height: auto;
+        width: auto; /* Allow the card to fit the mobile screen */
     }
 }
+
 .servicecardimg {
     display: flex;
     padding: 15px;
@@ -75,6 +82,7 @@
         height: auto;
     }
 }
+
 .servicecardimg {
     display: flex;
     padding: 15px;
@@ -90,6 +98,7 @@
     @media (max-width: $mobile-width) {
         flex-direction: column-reverse;
         height: auto;
+        width: auto; /* Allow the card to fit the mobile screen */
     }
 }
 .cardheading {
