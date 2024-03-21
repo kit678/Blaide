@@ -134,14 +134,10 @@
     }
 }
 .cardheading {
-    font-size: 2.5vw; // Adjusted for better scaling before mobile breakpoint
-.description {
-    margin-top: 10px; /* Adjust the value to ensure proper spacing */
-    font-weight: 300;
-    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
+    font-size: 2.5vw;
+    text-align: start;
     @media (max-width: $mobile-width) {
-        font-size: 5.5vw; // Increase font size for mobile for better readability
-        font-size: 5.5vw; // Increase font size for mobile for better readability
+        font-size: 5.5vw;
         text-align: center;
     }
 }
