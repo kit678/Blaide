@@ -13,9 +13,7 @@
     z-index: -1;
 }
 .root {
-    font-size: $large-font-size; // Use font-size for clarity
-    font-weight: $large-font-weight; // Use font-weight for clarity
-    line-height: $large-line-height; // Use line-height for clarity
+    font: $large-text; // Corrected variable name
     position: relative;
     background: none;
     position: relative; /* This can remain as is, since .videoBackground is now fixed */
@@ -37,9 +35,7 @@
 }
 
 .title {
-    font-size: $title-font-size; // Use font-size for clarity
-    font-weight: $title-font-weight; // Use font-weight for clarity
-    line-height: $title-line-height; // Use line-height for clarity
+    font: $title-text; // Corrected variable name
     text-align: center;
     letter-spacing: 0.4rem;
 
@@ -53,9 +49,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5em;
-    font-size: $paragraph-font-size; // Use font-size for clarity
-    font-weight: $paragraph-font-weight; // Use font-weight for clarity
-    line-height: $paragraph-line-height; // Use line-height for clarity
+    font: $paragraph-text; // Corrected variable name
 
     @media only screen and (max-width: $mobile-width) {
         font-size: 1rem;
@@ -67,9 +61,7 @@
 }
 
 .button {
-    font-size: $button-font-size; // Use font-size for clarity
-    font-weight: $button-font-weight; // Use font-weight for clarity
-    line-height: $button-line-height; // Use line-height for clarity
+    font: $button-text; // Corrected variable name
     text-align: center;
     background-color: $black;
     color: $white;
