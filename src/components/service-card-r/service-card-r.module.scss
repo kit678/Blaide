@@ -1,6 +1,6 @@
 @import '@styles/theme.module.scss';
 
-.servicecard {
+.serviceCardRoot {
     border: 0px solid #c6b9b9;
     border-radius: 0;
     display: flex;
@@ -9,7 +9,7 @@
     width: 60%;
 }
 
-.heading {
+.cardheading {
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
@@ -20,7 +20,10 @@
 .description {
     margin-top: 10px; /* Adjust the value to ensure proper spacing */
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25vw;
+    @media (max-width: $mobile-width) {
+        font-size: 3.5vw; /* Adjust font size for mobile devices */
+    }
     font-weight: 300;
 }
 
