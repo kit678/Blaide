@@ -62,12 +62,10 @@
 .servicecardimg {
     display: flex;
     padding: 15px;
-    justify-content: center;
     max-width: 100%;
     max-height: 100%;
 
     @media (max-width: $mobile-width) {
-        flex-direction: column;
         height: auto;
         width: auto; /* Allow the card to fit the mobile screen */
     }
