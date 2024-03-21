@@ -1,32 +1,60 @@
 @import '@styles/theme.module.scss';
 
 .serviceCardRoot {
-    border: 0px solid #c6b9b9;
-    border-radius: 0;
     display: flex;
-    padding: 15px;
-    flex-direction: column;
-    width: 60%;
+    flex-direction: row;
+    border: 0px solid #cec8c8;
+    border-radius: 40px;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-image: linear-gradient(white, white);
+    background-position: 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: unset;
+    height: 70vh;
+    overflow: visible;
+    width: 100%;
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
+    @media (max-width: $mobile-width) {
+        flex-direction: column-reverse;
+        height: auto;
+        width: auto;
 }
 
 .description {
     margin-top: 10px; /* Adjust the value to ensure proper spacing */
-    font-size: 2.5vw;
-    @media (max-width: $mobile-width) {
-        font-size: 5.5vw;
-        text-align: center;
-    }
+    font-size: 2.5vw; // Adjusted for better scaling before mobile breakpoint
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
     font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     @media (max-width: $mobile-width) {
         font-size: 3.5vw; /* Adjust font size for mobile devices */
+        text-align: center;
     }
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     font-weight: 300;
 }
 
 .image {
     top: 0;
     right: 0;
-    max-width: none; /* Adjust the value as needed */
+    display: flex;
+    padding: 15px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .serviceCardRoot {
@@ -50,6 +78,10 @@
     height: 70vh;
     overflow: visible;
     width: 100%; /* Ensure all cards have the same width */
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     @media (max-width: $mobile-width) {
         flex-direction: column-reverse;
         height: auto;
@@ -63,7 +95,19 @@
     max-width: 100%;
     max-height: 100%;
     @media (max-width: 100%) {
-        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    justify-content: center;
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
+    @media (max-width: $mobile-width) {
+        flex-direction: column-reverse;
+        height: auto;
+        width: auto; /* Allow the card to fit the mobile screen */
         height: auto;
     }
 }
@@ -79,6 +123,10 @@
         padding: 0;
     }
     justify-content: center;
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     @media (max-width: $mobile-width) {
         flex-direction: column-reverse;
         height: auto;
@@ -87,7 +135,12 @@
 }
 .cardheading {
     font-size: 2.5vw; // Adjusted for better scaling before mobile breakpoint
+.description {
+    margin-top: 10px; /* Adjust the value to ensure proper spacing */
+    font-weight: 300;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     @media (max-width: $mobile-width) {
+        font-size: 5.5vw; // Increase font size for mobile for better readability
         font-size: 5.5vw; // Increase font size for mobile for better readability
         text-align: center;
     }
