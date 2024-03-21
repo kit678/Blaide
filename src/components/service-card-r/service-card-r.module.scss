@@ -2,7 +2,7 @@
 
 .serviceCardRoot {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse; /* Reverse the order for ServiceCardR */
     border: 0px solid #cec8c8;
     border-radius: 40px;
     align-items: center;
@@ -19,6 +19,12 @@
     height: 70vh;
     overflow: visible;
     width: 100%;
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        height: auto;
+        width: auto; /* Allow the card to fit the mobile screen */
+    }
+}
 .description {
     margin-top: 10px; /* Adjust the value to ensure proper spacing */
     font-weight: 300;
