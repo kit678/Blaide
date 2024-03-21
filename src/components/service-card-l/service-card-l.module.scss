@@ -66,9 +66,10 @@
     }
 }
 .cardheading {
-    font: $title-text; // Corrected variable name
+    font-size: 4vw; // Use viewport width for responsive font size
     text-align: end;
     @media (max-width: $mobile-width) {
+        font-size: 5.5vw; // Increase font size for mobile for better readability
         text-align: center;
     }
 }
