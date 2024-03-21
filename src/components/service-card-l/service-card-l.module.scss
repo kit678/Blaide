@@ -13,7 +13,7 @@
     margin-top: 10px; /* Adjust the value to ensure proper spacing */
     text-align: end;
     font-weight: 300;
-    font-size: 1.25vw;
+    font-size: 1.1vw; // Adjusted for better scaling before mobile breakpoint
     @media (max-width: $mobile-width) {
         font-size: 3.5vw; /* Adjust font size for mobile devices */
     }
@@ -66,7 +66,7 @@
     }
 }
 .cardheading {
-    font-size: 4vw; // Use viewport width for responsive font size
+    font-size: 2.5vw; // Adjusted for better scaling before mobile breakpoint
     text-align: end;
     @media (max-width: $mobile-width) {
         font-size: 5.5vw; // Increase font size for mobile for better readability
