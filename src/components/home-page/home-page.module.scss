@@ -1,6 +1,5 @@
 @import '@styles/theme.module.scss';
 
-
 .videoBackground {
     position: fixed;
     top: 0;
@@ -88,4 +87,11 @@
 .servicesection {
     display: flex;
     flex-direction: row;
+}
+.infographic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infog1 {
 }

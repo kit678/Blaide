@@ -17,14 +17,23 @@ export interface HomePageProps {
 export const HomePage = ({ className }: HomePageProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className={styles.herodiv}
-            >
-                <button className={styles.button}>Learn more</button>
-            </motion.div>
+            <div className={styles.infographic}>
+                <div>
+                    <img src="/images/photop/bain/bain-1.svg" />
+                </div>
+                <div>
+                    <img src="/images/photop/bain/bain-2.svg" />
+                </div>
+                <div>
+                    <img src="/images/photop/bain/bain-3.svg" />
+                </div>
+                <div>
+                    <img src="/images/photop/bain/bain-4.svg" />
+                </div>
+                <div>
+                    <img src="/images/photop/bain/bain-5.svg" />
+                </div>
+            </div>
             <ServiceSection className={styles.servicesection} />
             <Organisations />
             <Cta />
