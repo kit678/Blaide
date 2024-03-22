@@ -52,7 +52,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                 >
                     <img src="/images/photop/bain/bain-1.svg" alt="Infographic 1" />
                 </motion.div>
-                </div>
+                
                 <motion.div
                     custom="left"
                     variants={imageVariants}
