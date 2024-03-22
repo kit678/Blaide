@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
 import styles from './home-page.module.scss';
 import { ServiceSection } from '../service-section/service-section';
 import { Organisations } from '../organisations/organisations';
@@ -50,6 +50,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                     animate={controls}
                 >
                     <img src="/images/photop/bain/bain-1.svg" alt="Infographic 1" />
+                </motion.div>
                 </div>
                 <motion.div
                     custom="left"
