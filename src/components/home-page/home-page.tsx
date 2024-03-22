@@ -5,7 +5,6 @@ import { ServiceSection } from '../service-section/service-section';
 import { Organisations } from '../organisations/organisations';
 import { Cta } from '../cta/cta';
 
-import videoBackground from '/images/blaide_mod_compressed.mp4'; // Adjust the import path as necessary
 export interface HomePageProps {
     className?: string;
 }
