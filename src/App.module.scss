@@ -49,3 +49,9 @@
 .read-the-docs {
   color: #888;
 }
+ .root {
+     background-color: #1c1c1c; /* Glossy black background */
+     min-height: 100vh; /* Full viewport height */
+     display: flex;
+     flex-direction: column;
+ }
