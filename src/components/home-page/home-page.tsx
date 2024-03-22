@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useAnimation, useInView, useViewportScroll } from 'framer-motion';
+import { useEffect } from 'react';
 import styles from './home-page.module.scss';
 import { ServiceSection } from '../service-section/service-section';
 import { Organisations } from '../organisations/organisations';
@@ -14,7 +15,7 @@ export interface HomePageProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 const imageVariants = {
-  hidden: (direction) => ({
+  hidden: (direction: 'left' | 'right' | 'up' | 'down') => ({
     opacity: 0,
     x: direction === 'left' ? -100 : 100,
     y: direction === 'up' ? -100 : 100,
@@ -29,7 +30,7 @@ const imageVariants = {
 
 export const HomePage = ({ className }: HomePageProps) => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({
+    const { ref, inView } = useInView({
         triggerOnce: true,
         rootMargin: '-100px 0px',
     });
@@ -59,7 +60,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                     animate={controls}
                 >
                     <img src="/images/photop/bain/bain-2.svg" alt="Infographic 2" />
-                </div>
+                </motion.div>
                 <div>
                     <img src="/images/photop/bain/bain-3.svg" />
                 </div>
