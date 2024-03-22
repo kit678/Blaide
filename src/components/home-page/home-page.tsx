@@ -50,12 +50,8 @@ export const HomePage = ({ className }: HomePageProps) => {
                     variants={imageVariants}
                     initial="hidden"
                     animate={controls}
-                >
-                    <img src="/images/photop/bain/bain-1.svg" alt="Infographic 1" />
-                </motion.div>
-                
                     ref={ref}
-                    src="/images/photop/bain/bain-1.svg"
+                    src="/images/photop/bain/bain-1-lg.svg"
                     alt="Infographic 1"
                 />
                 <motion.img
@@ -64,23 +60,19 @@ export const HomePage = ({ className }: HomePageProps) => {
                     initial="hidden"
                     animate={controls}
                     ref={ref}
-                    src="/images/photop/bain/bain-2.svg"
+                    src="/images/photop/bain/bain-2-lg.svg"
                     alt="Infographic 2"
                 />
-                ...
-            </div>
-            ...
-                >
-                    <img src="/images/photop/bain/bain-2.svg" alt="Infographic 2" />
-                </motion.div>
+            
+
                 <div>
-                    <img src="/images/photop/bain/bain-3.svg" />
+                    <img src="/images/photop/bain/bain-3-lg.svg" />
                 </div>
                 <div>
-                    <img src="/images/photop/bain/bain-4.svg" />
+                    <img src="/images/photop/bain/bain-4-lg.svg" />
                 </div>
                 <div>
-                    <img src="/images/photop/bain/bain-5.svg" />
+                    <img src="/images/photop/bain/bain-5-lg.svg" />
                 </div>
             </div>
             <ServiceSection className={styles.servicesection} />
