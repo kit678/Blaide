@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { motion, useAnimation, useInView, useViewportScroll } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import styles from './home-page.module.scss';
 import { ServiceSection } from '../service-section/service-section';
