@@ -31,7 +31,7 @@ const imageVariants = {
 
 export const HomePage = ({ className }: HomePageProps) => {
     const controls = useAnimation();
-    const { ref, inView } = useInView({
+    const [ref, inView] = useInView({
         triggerOnce: true,
         rootMargin: '-100px 0px',
     });
@@ -45,7 +45,7 @@ export const HomePage = ({ className }: HomePageProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.infographic}>
-                <motion.div
+                <motion.img
                     custom="up"
                     variants={imageVariants}
                     initial="hidden"
@@ -54,11 +54,22 @@ export const HomePage = ({ className }: HomePageProps) => {
                     <img src="/images/photop/bain/bain-1.svg" alt="Infographic 1" />
                 </motion.div>
                 
-                <motion.div
+                    ref={ref}
+                    src="/images/photop/bain/bain-1.svg"
+                    alt="Infographic 1"
+                />
+                <motion.img
                     custom="left"
                     variants={imageVariants}
                     initial="hidden"
                     animate={controls}
+                    ref={ref}
+                    src="/images/photop/bain/bain-2.svg"
+                    alt="Infographic 2"
+                />
+                ...
+            </div>
+            ...
                 >
                     <img src="/images/photop/bain/bain-2.svg" alt="Infographic 2" />
                 </motion.div>
